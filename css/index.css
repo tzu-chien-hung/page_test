@@ -1,0 +1,135 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+/* ================ 放大縮小功能 ================  */
+.oooo{
+    background-color: firebrick;
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    overflow: hidden;
+    transition: 0.5s;
+}
+input.section1_input_yt:checked + div > .oooo{
+    width:100vw;
+    height:100vh;
+    border-radius:0;
+}
+/* ================ 放大縮小功能 ================  */
+
+/* ================ 首頁功能 ================  */
+.section1 {
+    display: flex;
+}
+.section1_fb {
+    width: 50vw;
+    height: 100vh;
+}
+
+.section1_yt {
+    width: 50vw;
+    height: 100vh;
+    background-color: rgb(233, 233, 233);
+    text-align: center;
+}
+.section1_fb_content {
+    text-align: center;
+    margin-top: 300px;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.section1_yt_content {
+    text-align: center;
+    margin-top: 350px;
+    font-size: 40px;
+    font-weight: bold;
+}
+.section1_fb_img img {
+    width: 200px;
+}
+
+.section1_yt_img img {
+    width: 350px;
+}
+.section1_button {
+    border-radius: 100px;
+    /* border: 1px solid red; */
+    background-color: rgb(75, 103, 231);
+    box-shadow: 10px 5px 5px rgb(173, 158, 158);
+    color: white;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    line-height: 150px;
+    font-size: 35px;
+    margin: 120px auto;
+}
+
+.section1_button:hover {
+    background-color: rgb(45, 72, 190);
+    color: white;
+    box-shadow: 0px 0px 0px rgb(173, 158, 158);
+}
+/* ================ 首頁功能 ================  */
+
+/* ================ 左右滑動頁面功能 ================  */
+.page_flex {
+    display: flex;
+    overflow: hidden;
+}
+.slider_arrow {
+    height: 100vh;
+    width: 50px;
+    justify-content: center;
+    align-items: center;
+    background-color: aliceblue;
+}
+.slider_all {
+    display: flex;
+}
+.box1 {
+
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+}
+.box2 {
+    display: flex;
+    justify-content: flex-end;
+    text-align:center;
+}
+.main1 {
+    /* margin: 0 auto; */
+    width: 100vw;
+    height: 1200px;
+    display: flex;
+}
+
+.box2_2 {
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/Group1.png");
+    background-repeat: no-repeat;
+    background-size: 75%;
+    /* background-attachment: fixed; */
+    background-position: top center;
+    /* background-size: cover; */
+    position: relative;
+}
+
+.video_test {
+    height: 100vh;
+    width: 44%;
+    position: absolute;
+    left: 35.6%;
+    top: 20%;
+}
+.YouTube_block{
+    position: absolute;
+    top:10%;
+    left: 30%;
+}
+/* ================ 左右滑動頁面功能 ================  */
