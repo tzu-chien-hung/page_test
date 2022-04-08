@@ -72,6 +72,7 @@
 
         .section1_button_yt {
             background-color: rgb(238, 69, 69);
+            position: relative;
             z-index: 20;
         }
 
@@ -83,13 +84,14 @@
             display: none;
             width: 100px;
             height: 100px;
-            z-index: 20;
         }
 
         .nav__checkbox:checked~.nav__background {
             transform: scale(60);
         }
-
+        .nav__checkbox:checked~.section1_button_yt{
+            z-index: -1;
+        }
         input[type="checkbox"i] {
             background-color: initial;
             cursor: default;
@@ -114,6 +116,10 @@
             background-image: radial-gradient(#d9d9e0, #d1d1d1);
             z-index: 10;
             transition: transform 1s cubic-bezier(0.86, 0, 0.07, 1);
+        }
+        .nav__icon_a{
+            display: block;
+            width: 100px;
         }
     </style>
 </head>

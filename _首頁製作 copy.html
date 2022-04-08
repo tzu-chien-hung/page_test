@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首頁</title>
+    <style>
+                body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .section1 {
+            display: flex;
+        }
+
+        .section1_fb {
+            width: 50vw;
+            height: 100vh;
+        }
+
+        .section1_yt {
+            width: 50vw;
+            height: 100vh;
+            background-color: rgb(233, 233, 233);
+            text-align: center;
+        }
+
+        .section1_fb_content {
+            text-align: center;
+            margin-top: 300px;
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        .section1_yt_content {
+            text-align: center;
+            margin-top: 350px;
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        .section1_fb_img img {
+            width: 200px;
+        }
+
+        .section1_yt_img img {
+            width: 350px;
+        }
+
+        .section1_button {
+            border-radius: 100px;
+            /* border: 1px solid red; */
+            background-color: rgb(75, 103, 231);
+            box-shadow: 10px 5px 5px rgb(173, 158, 158);
+            color: white;
+            width: 150px;
+            height: 150px;
+            text-align: center;
+            line-height: 150px;
+            font-size: 35px;
+            margin: 120px auto;
+        }
+
+        .section1_button:hover {
+            background-color: rgb(45, 72, 190);
+            color: white;
+            box-shadow: 0px 0px 0px rgb(173, 158, 158);
+        }
+
+        .section1_button_yt {
+            background-color: rgb(238, 69, 69);
+            position: relative;
+            z-index: 20;
+        }
+
+        .section1_button_yt:hover {
+            background-color: rgb(189, 47, 47);
+        }
+
+        .nav__checkbox {
+            display: none;
+            width: 100px;
+            height: 100px;
+        }
+
+        .nav__checkbox:checked~.nav__background {
+            transform: scale(60);
+        }
+        .nav__checkbox:checked~.section1_button_yt{
+            z-index: -1;
+        }
+        .nav__checkbox:checked ~.oooo{
+            /* position: relative; */
+            z-index: 10;
+        }
+        input[type="checkbox"i] {
+            background-color: initial;
+            cursor: default;
+            appearance: auto;
+            box-sizing: border-box;
+            margin: 3px 3px 3px 4px;
+            padding: initial;
+            border: initial;
+        }
+
+        .nav__button {
+            z-index: 20;
+        }
+
+        .nav__background {
+            position: fixed;
+            top: 68%;
+            right: 23%;
+            width: 6rem;
+            height: 6rem;
+            border-radius: 50%;
+            background-image: radial-gradient(#d9d9e0, #d1d1d1);
+            z-index: 10;
+            transition: transform 1s cubic-bezier(0.86, 0, 0.07, 1);
+        }
+        .nav__icon_a{
+            display: block;
+            width: 100px;
+        }
+        .oooo{
+            /* background-color: firebrick; */
+            width:100px;
+            height:100px;
+            border-radius:50%;
+            overflow: hidden;
+            transition: 0.5s;
+        }
+        input:checked + div > .oooo{
+            width:100vw;
+            height:100vh;
+            border-radius:0;
+            
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .page_flex {
+            display: flex;
+            overflow: hidden;
+        }
+
+        .slider_arrow {
+            height: 100vh;
+            width: 50px;
+            justify-content: center;
+            align-items: center;
+            background-color: aliceblue;
+        }
+
+        .slider_all {
+            display: flex;
+        }
+
+        .box1 {
+
+            display: flex;
+            justify-content: flex-start;
+            position: relative;
+        }
+
+        .box2 {
+
+            display: flex;
+            justify-content: flex-end;
+            text-align: center;
+        }
+
+        .main1 {
+            /* margin: 0 auto; */
+            width: 100vw;
+            height: 1200px;
+            display: flex;
+        }
+
+        .box2_2 {
+            margin: 0 auto;
+            width: 100%;
+            height: 100%;
+            background-image: url("img/Group\ 1.png");
+            background-repeat: no-repeat;
+            background-size: 75%;
+            /* background-attachment: fixed; */
+            background-position: top center;
+            /* background-size: cover; */
+            position: relative;
+        }
+
+        .video_test {
+            height: 100vh;
+            width: 44%;
+            position: absolute;
+            left: 35.6%;
+            top: 20%;
+        }
+        .YouTube_block{
+            position: absolute;
+            top:10%;
+            left: 30%;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="section1">
+            <div class="section1_fb">
+                <div class="section1_fb_content">
+                    <div class="section1_fb_img"><img src="./img/facebook.svg" alt=""></div>
+                    <div>FB直播影片</div>
+                </div>
+                <div class="section1_button">
+                    <span>點擊我</span>
+                </div>
+            </div>
+            <div class="section1_yt">
+                <div class="section1_yt_content">
+                    <div class="section1_yt_img"><img src="./img/yt_img.png" alt=""></div>
+                    <div>網站嵌入直播影片</div>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="nav-toggle" class="nav__checkbox">
+
+                    <div class="section1_button section1_button_yt">
+                        <label for="nav-toggle" class="nav__button">
+                            <span class="nav__icon">點擊我</span>
+                        </label>
+
+                    </div>
+                    <div class="nav__background">
+                        <div class="page_flex oooo">
+                            <div class="slider_main_img">
+                                <div id="case_slider_all_container" class="slider_all"
+                                    style="transform: translateX(0%);transition: transform 0.8s ease-in-out 0s;">
+                                    <div class="main1">
+                                        <div class="slider_img slider_big_img slider_img_main slider_img_2 box2 box2_2">
+                                            <iframe class="video_test"
+                                                src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FTrendBuyChannel%2Fvideos%2F1088429208678491%2F&show_text=true&width=560&t=0"
+                                                width="560" height="429" style="border:none;overflow:hidden"
+                                                scrolling="no" frameborder="0" allowfullscreen="true"
+                                                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                                                allowFullScreen="true"></iframe>
+                                            <div class="slider_arrow slider_arrow_right" id="slider_arrow_right">右邊
+                                                <img style="width: 40px; height: 40px;" src="./img/yt_icon.png" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- <div style="width: 100vw; height: 400px; border: 1px solid gray; background-color:blueviolet; text-align: center;" class="slider_img slider_big_img slider_img_main slider_img_2 box2">
+                                            <div class="slider_arrow slider_arrow_right" id="slider_arrow_right">右邊</div>
+                                        </div> -->
+                                    <div style="width: 100vw; height: 1000px; border: 1px solid gray; background-color: antiquewhite; text-align: center;"
+                                        class="slider_img slider_big_img slider_img_main slider_img_1 box1">
+                                        <div class="slider_arrow slider_arrow_left" id="slider_arrow_left">左邊
+                                            <img style="width: 40px; height: 40px;" src="./img/fb_icon.png" alt="">
+                                        </div>
+                                        <div class="YouTube_block">
+                                            <iframe width="1000" height="562.37"
+                                                src="https://www.youtube.com/embed/QJhG_17DpRU"
+                                                title="YouTube video player" frameborder="0"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                allowfullscreen></iframe>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                        
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <script>
+        const ul = document.getElementById('case_slider_all_container');
+        const li = document.querySelectorAll('.slider_big_img');
+        let index = 0;
+        let left_index = 1;
+
+        //左右按鍵切換圖片
+
+        let arrow_left = document.getElementById('slider_arrow_left');
+        let arrow_right = document.getElementById('slider_arrow_right');
+        // console.log(arrow_left)
+
+        arrow_left.addEventListener('click', function () {
+            // clearInterval(carousel);
+            index--;
+            ul.style.transform = `translateX(${(-index * 50)}%)`;
+            if ((index - 4) % (li.length) == 0) {
+                ul.style.left = (left_index - 2) * 500 + "%";
+                left_index--;
+            }
+            // console.log(index, left_index, (index - 4) % (li.length))
+            // start();
+
+        });
+
+        arrow_right.addEventListener('click', function () {
+            // clearInterval(carousel);
+            index++;
+            ul.style.transform = `translateX(${(-index * 50)}%)`;
+            if ((index) % (li.length) == 0) {
+                ul.style.left = left_index * 500 + "%";
+                left_index++;
+            }
+            // start();
+        });
+
+    </script>
+</body>
+
+</html>
