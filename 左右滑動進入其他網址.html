@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        #test{
+            margin: 0 auto;
+            width: 100%;
+            height: 300px;
+            background-color: cornflowerblue;
+            color: blue;
+            font-size: 80px;
+            text-align: center;
+            padding-top: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id ="test" onmousedown="mousedown()" onmouseup="mouseup()">
+        往左滑進入Facebook | 往右滑進入Youtube
+    </div>
+    <script language="JavaScript">
+        var startX = 0;
+        function mousedown(event){
+            var e =window.event;
+            var obj = e.srcElement;
+            obj.style.color = 'blue';
+            startX = e.clientX;
+        }
+        function mouseup(event){
+            var e = window.event;
+            var obj = e.srcElement;
+            obj.style.color = 'black';
+            var endX = e.clientX;
+
+            if((startX - endX)>70){
+                window.location.href="https://facebook.com";
+                console.log('左：e:' + endX + ', s:' + startX)
+            }
+            if((endX - startX )>70){
+                window.location.href="https://youtube.com";
+                console.log('右：e:' + endX + ', s:' + startX)
+            }
+        }
+    </script>
+</body>
+
+</html>

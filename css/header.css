@@ -1,0 +1,276 @@
+*{
+    /* box-sizing: border-box; */
+    margin: 0;
+    list-style: none;
+    max-width: 100%;
+
+}
+body{
+    /* flex-shrink:0; */
+    margin: 0 auto;
+}
+header{
+    width: 100%;
+    max-height: 100px;
+    height: 100px;
+    position: sticky;
+    top :0 ;
+    z-index: 10;
+    background-color: #9070af;
+}
+nav{
+    background-color: #9070af;
+    font-family: "Arial Black"!important;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 1px solid red; */
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0px 30px;
+}
+
+/* 左邊圖片 */
+.logo{
+    display: flex;
+    width: 40%;
+    /* margin-left: 40px; */
+}
+.nav_a{
+    /* border: 1px solid red; */
+    /* height: 80px; */
+    margin-top: 30px;
+    display: block;
+}
+.nav_a a img{
+    width: 80%;
+}
+.logo div a img {
+    width: 80%;
+}
+
+/*選單*/
+
+.menu{
+    display: flex;
+    font: inherit;
+    line-height: 80px;
+    height: 80px;
+}
+#menuToggle_input{
+    display: none;
+    z-index: 100;
+}
+/* .menuToggle_span{
+    display: none;   
+} */
+.menu_item{
+    margin-left: 2px !important;
+    font-size: 18px;
+    padding: 10px 19px;
+    text-align: center;
+    color: white;
+    font-weight: 900;
+    cursor: pointer;
+}
+.menu_item a{
+    letter-spacing: 2px;
+}
+.menu_item a:hover{
+    color: black;
+    transition: 0.6s;
+}
+.blackBG{
+    display: none;
+}
+@media screen and (min-width: 1025px){
+    /* header{
+        height: 100px;
+    } */
+    nav{
+        max-width: 1280px;
+    }
+    .menu{
+        display: flex;
+    }
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024.98px){
+    .logo {
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 420px) and (max-width: 767.98px){
+    .logo {
+        width: 80%;
+    }
+    nav{
+        padding: 30px 30px 30px 15px;
+    }
+    .nav_a{
+        margin-top: 0px;
+
+    }
+}
+
+@media screen and (max-width: 419.98px) {
+    .logo {
+        width: 85%;
+    }
+    nav{
+        padding: 30px 30px 30px 15px;
+    }
+    .nav_a{
+        margin-top: 0px;
+
+    }
+}
+
+@media screen and (max-width: 1025px){
+
+    #menuToggle
+    {
+    display: block;
+    /* position: relative; */
+    top: 10px;
+    left: 0px;
+    z-index: 1;
+    user-select: none;
+    }
+
+    #menuToggle a
+    {
+    text-decoration: none;
+    
+    transition: color 0.3s ease;
+    }
+
+
+
+    #menuToggle input
+    {
+        display: block;
+        width: 40px;
+        height: 32px;
+        position: absolute;
+        top: -1;
+        right: 30px;
+        
+        cursor: pointer;
+        
+        opacity: 0; /* hide this */
+        z-index: 2; /* and place it over the hamburger */
+    
+    }
+
+    #menuToggle span
+    {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    
+    background: white;
+    border-radius: 3px;
+    
+    z-index: 1;
+    
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    transition: background 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    transition: opacity 0.55s ease;
+    }
+                
+    #menuToggle input:checked ~ span
+    {
+        opacity: 1;
+        transform: rotate(45deg) translate(-10px, -6px);
+        background: white;
+        z-index: 3;
+        top: 5px;
+        left: 5px;
+    }
+
+    #menuToggle span:first-child
+    {
+    transform-origin: 0% 0%;
+    }
+
+    #menuToggle span:nth-last-child(2)
+    {
+    transform-origin: 0% 100%;
+    }
+    #menuToggle input:checked ~ span:nth-last-child(3)
+    {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+    }
+    #menuToggle input:checked ~ span:nth-child(2)
+    {
+    transform: rotate(-45deg) translate(-14px, 8px);
+    }
+    .menu_div{
+        /* overflow: hidden;
+        height: 100vh;
+        width: 100vw; */
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    #menu
+    {
+        flex-flow: column;
+        position: fixed;
+        width: 300px;
+        height: 100vh;
+        /* margin: -100px 0 0 -50px; */
+        /* padding: 200px 50px; */
+        padding-top: 125px;
+        top:0;
+        right: 0;
+        background: #9070af;
+        list-style-type: none;
+        -webkit-font-smoothing: antialiased;
+        /* to stop flickering of text in safari */
+        transform-origin: 0% 0%;
+        transform: translateX(100%);
+        
+        transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    }
+    /* #menuToggle input:checked ~ menu
+    {
+    transform: translateX(calc(-100% +63px));
+    } */
+    #menu li
+    {
+    padding: 10px 0;
+    font-size: 22px;
+    }
+
+    /*
+    * And let's slide it in from the left
+    */
+
+    #menuToggle input:checked ~ div.blackBG{
+        display: block;
+        background-color: black;
+        opacity: 0.7;
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+    #menuToggle input:checked ~ div > ul
+    {
+        transform: translateX(0%);
+        z-index: 2;
+    }
+    #menuToggle_input{
+        z-index: 100 !important ;
+    }
+}
